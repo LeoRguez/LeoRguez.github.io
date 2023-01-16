@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viweport" content="width=device-width">
+        <title>Encriptador</title>
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="assets/encrypter.svg">
+    </head>
+
+    <body onload="inicio()">
+
+        <header>
+            <img src="imagenes/Logo.png" alt="Logo_alura" class="logo">
+        </header>
+
+        <div class="centro">
+            <div>
+                <textarea onkeypress="return check(event)" id="p1" cols="30" rows="10" class="ingresoTexto" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+    
+            <div class="cajaMunheco">
+                <img src="imagenes/Muñeco.png" alt="munheco" class="imgMunheco">
+                <p class="ningun">Ningún mensaje fue encontrado</p>
+                <p class="ingresa">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </div>
+
+        <div class="resultado">
+            <textarea readonly class="cajaResultado" cols="35" rows="34"></textarea>
+
+                <div class="correcto">
+                    <p>Texto correctamente copiado <br><iconify-icon icon="material-symbols:check-circle-rounded" style="color: green;" width="60" height="60"></iconify-icon></p>
+                </div>
+
+            <input id="copy" type="button" value="Copiar" class="copiar" onclick="copiarAlPortapapeles('p1')">
+        </div>
+
+
+        <div class="aviso">
+            
+            <p><iconify-icon icon="bi:exclamation-circle-fill" style="color: #495057;"></iconify-icon> sólo letras minúsculas y sin acentos</p>
+        </div>
+
+        <div class="botones">
+            <input type="button" value="Enctriptar" class="encriptar" onclick="encriptar()">
+            <input type="button" value="Desencriptar" class="desencriptar" onclick="desencriptar()">
+        </div>
+
+        <footer>
+            <div class="contenedor-footer">
+                <span>&copy; 2023 - Leonardo Rodríguez </span>
+                <ul class="icons">
+                    <li class="icon"><a href="https://github.com/LeoRguez" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="icon"><a href="https://www.linkedin.com/in/leonardo-rodr%C3%ADguez-26a3b8258/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+<script src="https://kit.fontawesome.com/7b9f8c27b2.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
